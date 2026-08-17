@@ -9,23 +9,17 @@ import Navbar from '../components/Navbar'
 import HeroSlider from '../components/HeroSlider'
 import Experience from '../components/Experience'
 import Activities from '../components/activities/Activities'
-import EquipmentGallery from '../components/EquipmentGallery'
 import Schedule from '../components/Schedule'
 import Pricing from '../components/Pricing'
 import Footer from '../components/Footer'
 
 export default function Home() {
-  // Dev-only bypass: visit the page with ?noIntro to skip the Preloader
-  // while you're editing styles. Defaults to showing the intro normally.
   const [skipIntro, setSkipIntro] = useState(false)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     setSkipIntro(params.has('noIntro'))
   }, [])
 
-  // Scroll-reveal for every element tagged with .reveal, across all sections.
-  // Runs after the child sections have committed their DOM, so it still finds
-  // everything even though the markup now lives in separate components.
   useEffect(() => {
     const reveal = new IntersectionObserver(
       (entries) => entries.forEach((e) => {
