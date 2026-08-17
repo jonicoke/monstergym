@@ -96,25 +96,13 @@
   color: var(--red);
 }
 
-.hero-content .div-actividades {
-  width: 100%;
-  margin-top: 28px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(20px, 3vw, 55px);
-  flex-wrap: nowrap;
-}
 
 .actividad-item {
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-bottom: 8px;
-
   cursor: default;
 }
 
@@ -197,14 +185,10 @@
 
 .hero-content .div-actividades {
   width: 100%;
-
   margin-top: 22px;
-
   display: flex;
   align-items: center;
   font-size: 30px;
-  justify-content: flex-start;
-
   gap: clamp(
     30px,
     2.5vw,
