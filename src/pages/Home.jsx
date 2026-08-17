@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { activities } from '../data/sitedata'
 import '../styles/globals.css'
 
-import '../styles/assets/Preloader.css'
-import '../styles/assets/EquipmentGallery.css'
+import '../styles/assets/preloader.css'
+import '../styles/assets/equipmentgallery.css'
 
 import Navbar from '../components/Navbar'
 import HeroSlider from '../components/HeroSlider'
