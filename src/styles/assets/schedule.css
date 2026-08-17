@@ -1,0 +1,245 @@
+.schedule {
+  background: var(--paper);
+  color: #111;
+}
+
+.schedule .section-head {
+  margin-bottom: 35px;
+}
+
+
+/* =========================
+   DAYS
+========================= */
+
+.day-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid #ccc;
+}
+
+.day-tabs button {
+  padding: 19px;
+
+  border: 0;
+  background: none;
+
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .16em;
+
+  color: #999;
+
+  cursor: pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+.day-tabs button:hover {
+  color: #111;
+}
+
+.day-tabs button.active {
+  background: #111;
+  color: #fff;
+}
+
+
+/* =========================
+   CLASS ROW
+========================= */
+
+.class-row {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    1fr
+    130px;
+
+  align-items: center;
+
+  min-height: 115px;
+
+  border-bottom: 1px solid #d2d0ca;
+}
+
+
+/* =========================
+   TIME
+========================= */
+
+.class-time {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.class-time span {
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.class-time strong {
+  font-family: 'Bebas Neue';
+  font-size: 42px;
+  line-height: .9;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.class-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.class-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.class-info h3 {
+  margin: 0;
+
+  font-size: 34px;
+  line-height: 1;
+}
+
+.class-info small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #888;
+  font-size: 12px;
+}
+
+
+/* =========================
+   RESERVE
+========================= */
+
+.class-reserve {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: var(--red);
+
+  transition:
+    gap .25s ease;
+}
+
+.class-reserve:hover {
+  gap: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .day-tabs {
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
+  }
+
+  .class-row {
+    grid-template-columns:
+      120px
+      1fr
+      100px;
+  }
+
+  .class-time strong {
+    font-size: 36px;
+  }
+
+  .class-info h3 {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .day-tabs {
+    display: flex;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .day-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .day-tabs button {
+    min-width: 82px;
+    padding: 17px 12px;
+  }
+
+
+  .class-row {
+    grid-template-columns:
+      90px
+      1fr;
+
+    min-height: 105px;
+
+    padding: 18px 0;
+  }
+
+
+  .class-time strong {
+    font-size: 34px;
+  }
+
+
+  .class-info {
+    gap: 10px;
+  }
+
+  .class-info h3 {
+    font-size: 25px;
+  }
+
+  .class-info small {
+    font-size: 11px;
+  }
+
+
+  .class-reserve {
+    grid-column: 2;
+
+    justify-content: flex-start;
+
+    margin-top: 8px;
+  }
+}

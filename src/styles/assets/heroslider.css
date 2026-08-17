@@ -1,0 +1,371 @@
+.hero-slider {
+  position: relative;
+  height: min(940px, 100vh);
+  min-height: 720px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: #050505;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.hero-media {
+  position: absolute;
+  inset: -5%;
+  overflow: hidden;
+}
+
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  will-change: transform;
+}
+
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.94) 0%,
+      rgba(5, 5, 5, 0.72) 38%,
+      rgba(5, 5, 5, 0.25) 75%,
+      rgba(5, 5, 5, 0.1) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(5, 5, 5, 0.9) 0%,
+      transparent 45%
+    );
+}
+.logo-hero {
+  position: absolute;
+  opacity: 0.05;
+  
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding:
+    120px
+    max(6vw, 35px)
+    70px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+.hero-content {
+  text-align: center;
+  justify-items: center;
+}
+.hero-title {
+  font-family: 'Caveat';
+  font-size: clamp(
+    60px,
+    17vw,
+    100px
+  );
+}
+
+.hero-slider h1 em {
+  font-family: 'Arizonia', cursive;
+  font-weight: 400;
+  font-size: 1.15em;
+  line-height: .8;
+  color: var(--red);
+}
+
+.hero-content .div-actividades {
+  width: 100%;
+  margin-top: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(20px, 3vw, 55px);
+  flex-wrap: nowrap;
+}
+
+.actividad-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 8px;
+
+  cursor: default;
+}
+
+.hero-content .actividades-hero {
+  margin: 0;
+
+  white-space: nowrap;
+
+  font-size: clamp(11px, 1vw, 15px);
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* Línea */
+
+.actividad-line {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  opacity: 0;
+
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.25s ease;
+}
+
+
+/* Actividad actual */
+
+.actividad-item.active .actividad-line {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+
+/* Pequeño movimiento */
+
+.actividad-item.active .actividades-hero {
+  transform: translateY(-2px);
+}
+/* =========================
+   BUTTON
+========================= */
+
+.hero-actions {
+  margin-top: 42px;
+}
+
+.hero-actions .btn {
+  min-height: 54px;
+
+  padding: 0 24px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.hero-content .div-actividades {
+  width: 100%;
+
+  margin-top: 22px;
+
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  justify-content: flex-start;
+
+  gap: clamp(
+    30px,
+    2.5vw,
+    60px
+  );
+
+  flex-wrap: nowrap;
+}
+
+.hero-content .actividades-hero {
+  margin: 0;
+
+  white-space: nowrap;
+
+  font-size: clamp(
+    11px,
+    1vw,
+    15px
+  );
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.hero-slider-dots {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 35px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.hero-slider-dots button {
+  width: 3px;
+  height: 24px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-slider-dots button.active {
+  height: 45px;
+  background: var(--red);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .hero-content .div-actividades {
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-slider {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    padding:
+      120px
+      30px
+      60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(
+      75px,
+      17vw,
+      125px
+    );
+  }
+
+  .hero-content .div-actividades {
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    max-width: 650px;
+  }
+
+  .hero-slider-dots {
+    right: 18px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero-slider {
+    min-height: 680px;
+  }
+
+  .hero-content {
+    padding:
+      110px
+      22px
+      50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(
+      65px,
+      20vw,
+      100px
+    );
+  }
+
+  .hero-actions {
+    margin-top: 30px;
+  }
+
+  .hero-content .div-actividades {
+    margin-top: 18px;
+
+    gap: 9px 16px;
+  }
+
+  .hero-content .actividades-hero {
+    font-size: 11px;
+  }
+
+  .hero-slider-dots {
+    display: none;
+  }
+
+}

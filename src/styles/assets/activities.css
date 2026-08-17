@@ -1,0 +1,57 @@
+.activities { background: #0b0b0b; }
+
+/* Overrides the shared .section-head h2 base size from globals.css */
+.section-head h2 { font-size: clamp(60px, 7vw, 105px); margin-top: 18px; }
+
+.activity-grid { display: grid; grid-template-columns: repeat(4, 1fr); height: 620px; }
+.activity-card { position: relative; overflow: hidden; border-right: 1px solid rgba(255, 255, 255, .2); }
+.activity-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: .6s; }
+.activity-card:hover img { filter: grayscale(0); transform: scale(1.04); }
+.activity-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0, 0, 0, .96), transparent 65%); }
+.card-index, .activity-tag { position: absolute; top: 25px; font-size: 10px; letter-spacing: .15em; }
+.card-index { left: 22px; color: #999; }
+.activity-tag { right: 22px; color: var(--red); text-transform: uppercase; }
+.activity-copy { position: absolute; bottom: 0; padding: 28px; width: 100%; transform: translateY(72px); transition: .4s; }
+.activity-card:hover .activity-copy { transform: translateY(0); }
+.activity-copy h3 { font-size: 48px; }
+.activity-copy p { height: 56px; color: #aaa; font-size: 12px; line-height: 1.55; margin: 6px 0 15px; }
+.activity-copy a { display: flex; align-items: center; gap: 8px; color: var(--red); font-size: 10px; text-transform: uppercase; font-weight: 700; letter-spacing: .12em; }
+
+@media (max-width: 900px) {
+  .activity-grid { grid-template-columns: 1fr 1fr; height: auto; }
+  .activity-card { height: 480px; }
+  .activity-copy { transform: none; }
+}
+
+@media (max-width: 600px) {
+  .activity-grid { grid-template-columns: 1fr; }
+  .activity-card { height: 520px; }
+}
+
+
+.div-actividades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 2vw, 40px);
+  flex-wrap: nowrap;
+}
+
+.actividades-hero {
+  margin: 0;
+  font-size: clamp(11px, 1vw, 16px);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .div-actividades {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    padding: 0 20px;
+  }
+
+  .actividades-hero {
+    font-size: 12px;
+  }
+}
