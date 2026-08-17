@@ -3,7 +3,7 @@ import { activities } from '../data/sitedata'
 import '../styles/globals.css'
 
 import '../styles/assets/preloader.css'
-import '../styles/assets/equipmentgallery.css'
+import '../styles/assets/EquipmentGallery.css'
 
 import Navbar from '../components/Navbar'
 import HeroSlider from '../components/HeroSlider'
