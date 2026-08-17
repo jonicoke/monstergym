@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 import { classes, days, activities } from '../data/siteData'
-import '../styles/assets/Schedule.css'
+import '../styles/assets/schedule.css'
 
 export default function Schedule() {
   const [day, setDay] = useState('Lunes')

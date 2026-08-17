@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Play } from 'lucide-react'
 import { gsap } from 'gsap'
 
-import '../styles/assets/HeroSlider.css'
+import '../styles/assets/heroslider.css'
 import ActivitiesHero from './activities/ActivitiesHero'
 
 const SLIDES = [

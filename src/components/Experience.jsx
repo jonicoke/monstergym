@@ -1,5 +1,5 @@
 import { Dumbbell, ShieldCheck, Sparkles, Zap } from 'lucide-react'
-import '../styles/assets/Experience.css'
+import '../styles/assets/experience.css'
 
 export default function Experience() {
   return (

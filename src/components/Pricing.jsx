@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 import { plans } from '../data/sitedata'
-import '../styles/assets/Pricing.css'
+import '../styles/assets/pricing.css'
 
 export default function Pricing() {
   const [currentIndex, setCurrentIndex] = useState(0)

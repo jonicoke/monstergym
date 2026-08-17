@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import '../styles/assets/Navbar.css'
+import '../styles/assets/navbar.css'
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false)
