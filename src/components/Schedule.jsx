@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 
-import { classes, days, activities } from '../data/siteData'
+import { classes, days, activities } from '../data/sitedata'
 import '../styles/assets/schedule.css'
 
 export default function Schedule() {
