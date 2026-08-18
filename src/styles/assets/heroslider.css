@@ -1,28 +1,19 @@
 .hero-slider {
   position: relative;
-  height: min(940px, 100vh);
-  min-height: 720px;
-
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-
-  background: #050505;
+  width: 100%;
+  height: 100vh;
 }
 
-
-/* =========================
-   BACKGROUND
-========================= */
-
 .hero-media {
-  position: absolute;
-  inset: -5%;
+  position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .hero-media video {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -47,6 +38,7 @@
       rgba(5, 5, 5, 0.9) 0%,
       transparent 45%
     );
+    z-index:2;
 }
 .logo-hero {
   position: absolute;
@@ -60,11 +52,10 @@
 ========================= */
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-
+  position: absolute;
+  inset: 0;
+  z-index: 3;
   width: 100%;
-
   padding:
     120px
     max(6vw, 35px)
@@ -352,4 +343,13 @@
     display: none;
   }
 
+}
+
+.hero-video-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
