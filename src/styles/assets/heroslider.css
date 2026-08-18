@@ -247,7 +247,7 @@
    MOBILE
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1111px) {
 
   .hero-slider {
     min-height: 720px;
@@ -269,8 +269,7 @@
     );
   }
   .hero-title{
-   margin: 5vh 0 10vh 0;
-
+    margin: 5vh 0 10vh 0;
   }
 
   .hero-content .div-actividades {
@@ -332,7 +331,9 @@
   .hero-slider-dots {
     display: none;
   }
-
+  .hero-title {
+    margin: 5vh 0 10vh 0;
+  }
 }
 
 .hero-video-layer {
