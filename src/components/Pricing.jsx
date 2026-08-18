@@ -8,6 +8,7 @@ export default function Pricing() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [hoveredPlan, setHoveredPlan] = useState(null)
   const [visibleCards, setVisibleCards] = useState(3)
+  const [selectedPlan, setSelectedPlan] = useState(null) 
 
   const plansWindowRef = useRef(null)
   const plansTrackRef = useRef(null)
@@ -124,6 +125,21 @@ export default function Pricing() {
     )
   }, [visibleCards])
 
+  useEffect(() => {
+    const handleSelectPlan = (e) => {
+      const planName = e.detail?.planName
+      const idx = plans.findIndex((p) => p.name === planName)
+      if (idx === -1) return
+
+      const clampedIndex = Math.min(idx, Math.max(0, plans.length - visibleCards))
+      setCurrentIndex(clampedIndex)
+      setSelectedPlan(planName) // NUEVO: marca el plan
+    }
+
+    window.addEventListener('select-plan', handleSelectPlan)
+    return () => window.removeEventListener('select-plan', handleSelectPlan)
+  }, [visibleCards, plans])
+
   return (
     <section
       id="planes"
@@ -165,20 +181,14 @@ export default function Pricing() {
           >
             {plans.map((p) => {
               const isFeatured =
-                hoveredPlan === p.name
+                hoveredPlan === p.name || selectedPlan === p.name // MODIFICADO
 
               return (
                 <article
                   key={p.name}
-                  className={`plan ${
-                    isFeatured ? 'featured' : ''
-                  }`}
-                  onMouseEnter={() =>
-                    setHoveredPlan(p.name)
-                  }
-                  onMouseLeave={() =>
-                    setHoveredPlan(null)
-                  }
+                  className={`plan ${isFeatured ? 'featured' : ''}`}
+                  onMouseEnter={() => setHoveredPlan(p.name)}
+                  onMouseLeave={() => setHoveredPlan(null)}
                 >
                   {isFeatured && (
                     <span className="popular">

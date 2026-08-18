@@ -6,7 +6,6 @@ import "../../styles/assets/activities.css";
 const Activities = ({ activities }) => {
   return (
     <section id="actividades" className="activities">
-      <EquipmentGallery />
       <ActivitiesScrollText activities={activities} />
     </section>
   );

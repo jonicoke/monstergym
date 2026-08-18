@@ -8,6 +8,7 @@ export const activities = [
     tag: 'Potencia',
     text: 'Técnica, reflejos y resistencia para liberar tu mejor versión.',
     video: '/videos/hero-boxing.mp4',
+    video2: '/videos/equippment/equipment-boxeo.mp4'
   },
   {
     name: 'Funcional',
@@ -16,6 +17,7 @@ export const activities = [
     tag: 'Intensidad',
     text: 'Circuitos dinámicos que entrenan cada músculo y cada movimiento.',
     video: '/videos/hero-funcional.mp4',
+    video2: '/videos/equippment/equipment-funcional.mp4'
   },
   {
     name: 'Calistenia',
@@ -23,6 +25,8 @@ export const activities = [
     image: '/images/calistenia.jpg',
     tag: 'Control',
     text: 'Dominá tu cuerpo con progresiones de fuerza y movilidad.',
+    video: '/videos/hero-calistenia.mp4',
+    video2: '/videos/equippment/equipment-calistenia.mp4'
   },
   {
     name: 'Danza',
@@ -30,6 +34,9 @@ export const activities = [
     image: '/images/danza.jpg',
     tag: 'Energía',
     text: 'Ritmo, coordinación y cardio en una clase que no se siente como rutina.',
+    video: '/videos/hero-danza.mp4',
+    video2: '/videos/equippment/equipment-danza.mp4'
+  
   },
   {
     name: 'Taekwondo',
@@ -37,6 +44,9 @@ export const activities = [
     image: null,
     tag: 'Casual / Competitivo',
     text: 'Disciplina, técnica y preparación física para todos los niveles.',
+    video: '/videos/hero-taekwondo.mp4',
+    video2: '/videos/equippment/equipment-taekwondo.mp4'
+    
   },
   {
     name: 'Telas',
@@ -44,6 +54,9 @@ export const activities = [
     image: null,
     tag: 'Aéreo',
     text: 'Fuerza, flexibilidad y expresión corporal suspendido en el aire.',
+    video: '/videos/hero-telas.mp4',
+    video2: '/videos/equippment/equipment-telas.mp4'
+    
   },
   {
     name: 'Acrobacia',
@@ -51,6 +64,9 @@ export const activities = [
     image: '/images/acrobacia.jpg',
     tag: 'Coordinación',
     text: 'Ejercicios de equilibrio y flexibilidad para desafiar tu cuerpo.',
+    video: '/videos/hero-acrobacia.mp4',
+    video2: '/videos/equippment/equipment-acrobacia.mp4'
+    
   },
 ]
 // DIAS Y HORARIOS

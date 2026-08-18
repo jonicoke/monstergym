@@ -34,7 +34,7 @@ button { font: inherit; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 54px; padding: 0 25px; text-transform: uppercase; font-size: 11px; letter-spacing: .13em; font-weight: 700; transition: .25s; }
 .btn:hover { transform: translateY(-3px); }
 .primary { background: var(--red); color: white; }
-.ghost, .outline { border: 1px solid rgba(255, 255, 255, .22); color: white; }
+.ghost, .outline { border: 0.5px solid rgba(255, 255, 255, .22); color: white; }
 
 /* Section wrapper spacing — reused by every section */
 .section-pad { padding: 130px max(7vw, 24px); }
