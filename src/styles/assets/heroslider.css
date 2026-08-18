@@ -71,7 +71,6 @@
     17vw,
     100px
   );
-  margin: 15vh 0;
 }
 
 .hero-slider h1 em {
@@ -268,6 +267,10 @@
       17vw,
       125px
     );
+  }
+  .hero-title{
+   margin: 5vh 0 10vh 0;
+
   }
 
   .hero-content .div-actividades {
